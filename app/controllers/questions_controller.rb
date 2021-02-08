@@ -3,6 +3,10 @@ class QuestionsController < ApplicationController
     @test = "テストテキスト"
   end
 
+  def show
+    @question = Question.find(params[:id])
+  end
+
   def new
     @question = Question.new
   end
