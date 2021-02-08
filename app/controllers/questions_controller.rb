@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     if @question.save
       flash[:notice] = "成功！"
-      redirect_to("/questions/new")
+      redirect_to("/questions/#{@question.id}")
     else
       flash.now[:alert] = "失敗！"
       render("questions/new")
