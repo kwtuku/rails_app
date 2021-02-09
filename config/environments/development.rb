@@ -32,6 +32,8 @@ Rails.application.configure do
 
   # 承認メールに記載するデフォルトのURLの設定
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  config.action_mailer.delivery_method = :letter_opener_web
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
