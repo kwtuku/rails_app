@@ -1,0 +1,10 @@
+<header>
+  <div class="header-logo">
+    Rails beginner
+  </div>
+  <ul>
+    <li>
+      <%= link_to("ログアウト", "/users/sign_out", method: :delete, data: {confirm: "本当にログアウトしますか？"}) %>
+    </li>
+  </ul>
+</header>
