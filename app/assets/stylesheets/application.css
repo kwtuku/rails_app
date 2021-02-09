@@ -25,6 +25,10 @@ input, textarea {
   padding: 6px;
 }
 
+input[type="checkbox"] {
+  width: 15px;
+}
+
 input[type="submit"] {
   background-color: #FF5D57;
   border-radius: 5px;
@@ -62,4 +66,8 @@ header a {
 .header-logo {
   float: left;
   padding-right: 20px;
+}
+
+.header-logo a {
+  text-decoration: none;
 }
