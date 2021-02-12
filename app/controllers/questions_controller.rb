@@ -23,6 +23,21 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      flash[:notice] = "成功！"
+      redirect_to("/questions/#{@question.id}")
+    else
+      flash.now[:alert] = "失敗！"
+      render("questions/edit")
+    end
+  end
+
   private
     def question_params
       params.require(:question).permit(:title, :body)
