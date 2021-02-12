@@ -13,6 +13,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
+    @question.user_id = current_user.id
     if @question.save
       flash[:notice] = "成功！"
       redirect_to("/questions/#{@question.id}")
