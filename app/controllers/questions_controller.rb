@@ -38,6 +38,13 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    flash[:notice] = "成功！"
+    redirect_to("/questions")
+  end
+
   private
     def question_params
       params.require(:question).permit(:title, :body)

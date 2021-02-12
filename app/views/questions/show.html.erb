@@ -1,3 +1,4 @@
 <p><%= @question.title %></p>
 <p><%= @question.body %></p>
 <%= link_to("編集", "/questions/#{@question.id}/edit") %>
+<%= link_to("削除", "/questions/#{@question.id}", method: :delete, data: {confirm: "本当に削除しますか？"}) %>
